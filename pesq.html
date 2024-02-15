@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscrição</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+
+    <form action="http://localhost:3001/aluno" method="post">
+        <nav>
+            <div class="top">
+                <h1>Formulário de Inscrição</h1>
+            </div>
+        </nav>
+        <section>
+            <div class="content">
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="id">id aluno:</label>
+                        <input placeholder="Digite seu id do aluno:" type="text" id="id" name="id_aluno"
+                            maxlength="70"  />
+                    </div>
+                </div>
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="nome">Nome completo:</label>
+                        <input placeholder="Digite seu nome completo:" type="text" id="nome" name="usuario_nome"
+                            maxlength="70"  />
+                    </div>
+                </div>
+            </div>
+            <div class="content_enviar">
+                <button type="submit" id="botão_enviar">Enviar</button>
+            </div>
+
+        </section>
+    </form>
+</body>
+
+</html>
