@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscrição</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <form action="http://localhost:3001/" method="post">
+        <nav>
+            <div class="top">
+                <h1>Formulário de Inscrição</h1>
+            </div>
+        </nav>
+        <section>
+            <div class="content">
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="nome">Nome completo:</label>
+                        <input placeholder="Digite seu nome completo:" type="text" id="nome" name="usuario_nome"
+                            maxlength="70" required />
+                    </div>
+                    <div class="campo">
+                        <label for="email">Digite seu email:</label>
+                        <input placeholder="Digite seu email:" type="email" id="email" name="email_usuario" required />
+                    </div>
+                </div>
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="cpf">Digite seu CPF:</label>
+                        <input placeholder="Apenas numeros" type="number" id="cpf" name="cpf_usuario" maxlength="11"
+                            required onblur="validaCpf()" value="85821136172" />
+                    </div>
+                    <div class="campo">
+                        <label for="data">Digite sua data de nascimento:</label>
+                        <input placeholder="Digite sua data de nascimento:" type="date" id="data" name="data_nascimento"
+                            required onblur="nascimento()" />
+                    </div>
+                </div>
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="telefone">Digite seu telefone celular com DDD:</label>
+                        <input placeholder="(XX)XXXXX-XXXX" type="number" id="telefone" name="telefone_usuario"
+                            required />
+                    </div>
+                    <div class="campo">
+                        <label for="endereco">Digite seu endereço:</label>
+                        <input placeholder="Endereço:" type="text" id="endereco" name="endereco_usuario" maxlength="100"
+                            required />
+                    </div>
+                </div>
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="cidade">Digite sua cidade:</label>
+                        <input placeholder="Cidade:" type="text" id="cidade" name="cidade_usuario" maxlength="50"
+                            required />
+                    </div>
+                    <div>
+                        <label for="senha">Digite sua senha:</label>
+                        <input placeholder="Senha" type="password" id="password" name="password" maxlength="4"required>
+                    </div>
+                    <div class="campo">
+                        <label>Estados:</label>
+                        <select id="estados" name="estados" class="estados">
+                            <option value=""></option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná </option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rr">Roraima </option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="se">Sergipe</option>
+                            <option value="to">Tocantins</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="content-campo">
+                    <div class="campo">
+                        <label for="cep">Digite seu CEP:</label>
+                        <input placeholder="CEP:" type="number" id="cep" name="cep_usuario" required />
+                    </div>
+                    <div class="campo">
+                        <label>Tipo usuário:</label>
+                        <select id="tipo_usuario" name="usuario" class="tipo_usuario">
+                            <option value=""></option>
+                            <option value="aluno">Aluno</option>
+                            <option value="professor">Professor</option>
+                            <option value="responsavel_financeiro">Responsável Financeiro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="content_enviar">
+                <button type="submit" id="botão_enviar">Enviar</button>
+            </div>
+
+        </section>
+    </form>
+</body>
+
+</html>
